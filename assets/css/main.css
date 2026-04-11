@@ -443,7 +443,7 @@ h6 {
     display: none;
     list-style: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
+    inset: 90px  60px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
@@ -454,7 +454,10 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
   }
-
+.navmenu ul li{
+margin-left: 5rem;
+padding-top: 1rem;
+}
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
@@ -1082,7 +1085,337 @@ section,
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
+@media (max-width: 480px) {
 
+  /* Force 2 per row */
+  #stats .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #stats .col-md-6 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Reduce spacing */
+  #stats .stats-item {
+    padding: 10px 5px;
+  }
+
+  /* Reduce number size */
+  #stats .stats-item span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* Reduce text size */
+  #stats .stats-item p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .text-center img{
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+@media (max-width: 900px) {
+
+  /* Force 2 per row */
+  #footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #footer .col-md-6 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Reduce spacing */
+  #footer .col-md-6 {
+    padding: 10px 5px;
+  }
+
+  /* Align icon + text nicely */
+  #footer .d-flex {
+    align-items: flex-start;
+    gap: 3px;
+  }
+#footer .social-links a i{
+  font-size: 12px !important;
+}
+  /* Reduce icon size */
+  #footer .icon {
+    font-size: 16px;
+  }
+
+  /* Reduce heading size */
+  #footer h4 {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  /* Reduce text size */
+  #footer p,
+  #footer span,
+  #footer strong {
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  /* Social icons */
+  #footer .social-links a {
+    font-size: 14px;
+    margin-right: 6px;
+  }
+}
+@media (min-width:500px) and (max-width: 900px) {
+
+  /* Keep them side by side */
+  #hero .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #hero .col-lg-5 {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Reduce text size */
+  #hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  #hero p {
+    font-size: 14px;
+  }
+
+  /* Button size */
+  #hero .btn-get-started {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  /* Image adjustment */
+  #hero .hero-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+  }
+}
+@media (min-width:500px) and (max-width: 900px) {
+
+  /* Keep both columns side by side */
+  #about .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    
+  }
+
+  #about .col-lg-7,
+  #about .col-lg-5 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Reduce text size */
+  #about .content p,
+  #about .content li span {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* Fix spacing */
+  #about .content {
+    padding-left: 10px !important;
+  }
+
+  /* Images responsive */
+  #about img {
+    width: 100%;
+    height: 360px;
+  }
+  #about .mt-4{
+    display: none;
+  }
+}
+
+/* =========================
+   MENU SECTION - 900px
+========================= */
+
+@media (max-width: 900px) {
+
+  /* Tabs spacing fix */
+  #menu .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  #menu .nav-tabs .nav-item {
+    flex: 0 0 auto;
+  }
+
+ .text-center img{
+  width: 70px;
+  height: 70px;
+ }
+
+  /* Make menu items 2 per row */
+  #menu .menu-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Fix image size */
+  #menu .menu-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text scaling */
+  #menu .menu-item h4 {
+    font-size: 16px;
+  }
+
+  #menu .menu-item .ingredients {
+    font-size: 12px;
+  }
+
+  #menu .menu-item .price {
+    font-size: 14px;
+  }
+
+  /* Add spacing between items */
+  #menu .menu-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width:500px) and (max-width: 900px) {
+
+  /* Left "Why Choose Yummy" becomes full width */
+  #why-us .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Right side container stays full width */
+  #why-us .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Force the 3 boxes into one row */
+  #why-us .col-xl-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  /* Reduce spacing a bit */
+  #why-us .icon-box {
+    padding: 15px;
+  }
+
+  #why-us h4 {
+    font-size: 14px;
+  }
+
+  #why-us p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+
+  /* Left "Why Choose Yummy" becomes full width */
+  #why-us .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  /* Right side container stays full width */
+  #why-us .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Force the 3 boxes into one row */
+  #why-us .col-xl-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Reduce spacing a bit */
+  #why-us .icon-box {
+    padding: 15px;
+  }
+
+  #why-us h4 {
+    font-size: 14px;
+  }
+
+  #why-us p {
+    font-size: 12px;
+  }
+}@media (max-width: 900px) {
+
+  /* make row behave like flex grid override */
+  #chefs .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* FIRST CARD FULL WIDTH */
+  #chefs .col-lg-4:nth-child(1) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* OTHER CARDS SIDE BY SIDE */
+  #chefs .col-lg-4:nth-child(2),
+  #chefs .col-lg-4:nth-child(3) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* optional: reduce text size */
+  #chefs h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  #stats .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #stats .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  #stats .stats-item span {
+    font-size: 22px;
+  }
+
+  #stats .stats-item p {
+    font-size: 12px;
+  }
+}
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
